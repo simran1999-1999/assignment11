@@ -1,0 +1,92 @@
+<html>
+
+<head>
+
+    <title>JavaJam Coffee House Home</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="javajam.css">
+
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>
+                JavaJam Coffee House
+            </h1>
+        </header>
+        <nav>
+            <ul>
+
+                <li><a href="Home.html">Home</a></li>
+
+                <li><a href="menu.html">Menu</a></li>
+
+                <li><a href="music.html">Music</a></li>
+
+                <li><a href="jobs.html">Jobs</a></li>
+
+            </ul>
+        </nav>
+        <main>
+            <div id="herojobs"></div>
+            <br />
+            <h2>Jobs At Javajam</h2>
+            <p>Want To Work At Javajam?? Fill Out the form below to start your application.<br />Required fields are
+                marks with an asterrisk(*).</p>
+            <form action="javajam8.php">
+                <label for="myName">*Name:</label>
+                <input type="text" name="myName" id="myName" required="required" placeholder="Enter your name">
+                <br />
+                <label for="myEmail">*E-mail:</label>
+                <input type="email" name="myEmail" id="myEmail" required="required"
+                    placeholder="you@yourdomain.com"><br />
+                <label for="myExperience">*Experience:</label>
+                <textarea name="myExperience" id="myExperience" rows="2" cols="20" required="required"></textarea>
+                <br /><br />
+                <input id="mySubmit" type="submit" value="Apply Now">
+
+            </form>
+        </main>
+        <footer>
+            Copyright &copy; 2018 JavaJam Coffee House <br>
+            E-mail:
+            <a href="mailto:skaur9933@conestogac.on.ca">
+                skau9933@conestogac.on.ca</a>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript">
+
+    function func() {
+
+        var epattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
+        var name = document.getElementById("myName").value;
+        var mail = document.getElementById("myEmail").value;
+        var exp = document.getElementById("myExperience").value;
+
+
+        if (name == "") {
+            alert('Please Enter Name');
+            return false;
+
+        } else if (mail == "" || !(mail.match(epattern))) {
+
+            alert('Please Enter valid email');
+
+            return false;
+
+        } else if (exp == "") {
+            
+            alert('Please Enter Experience');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>
